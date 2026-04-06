@@ -1,0 +1,64 @@
+/*
+ * variables.css — Design tokens
+ * ──────────────────────────────────────────────
+ * Aquí viven todos los colores, fuentes y valores
+ * reutilizables. Cambia la paleta editando solo
+ * este archivo.
+ */
+
+/* ── Google Fonts ─────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&family=Inter:wght@300;400;500&display=swap');
+
+/* ── Modo claro (default) ─────────────────────── */
+:root {
+  /* Paleta Blue Eclipse */
+  --color-1: #272757;   /* azul medianoche principal */
+  --color-2: #8686AC;   /* lila medio — acento suave */
+  --color-3: #505081;   /* azul-violeta medio */
+  --color-4: #0F0E47;   /* navy profundo */
+
+  /* Superficies */
+  --bg:           #f4f4f8;
+  --bg-surface:   #eaeaf0;
+  --bg-card:      #ffffff;
+  --accent-light: #e8e8f4;
+
+  /* Texto */
+  --text-primary:   #0F0E47;
+  --text-secondary: #505081;
+  --text-muted:     #8686AC;
+
+  /* Bordes */
+  --border: rgba(80, 80, 129, 0.14);
+
+  /* Tipografía */
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'Inter', sans-serif;
+
+  /* Espaciado */
+  --section-padding: 72px 2.5rem;
+  --max-width:       900px;
+  --nav-height:      64px;
+
+  /* Radios */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  /* Transición global */
+  --transition: 0.2s ease;
+}
+
+/* ── Modo oscuro ──────────────────────────────── */
+[data-dark="1"] {
+  --bg:           #0a0920;
+  --bg-surface:   #0F0E47;
+  --bg-card:      #181750;
+  --accent-light: #1a1960;
+
+  --text-primary:   #e8e8f4;
+  --text-secondary: #8686AC;
+  --text-muted:     #505081;
+
+  --border: rgba(134, 134, 172, 0.15);
+}
