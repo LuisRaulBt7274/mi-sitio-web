@@ -59,11 +59,13 @@ if (result[0]?.values[0][0] === 0) {
   db.run(`
     INSERT INTO projects (id, title, description, tech_stack, github_url) VALUES 
     (1, 'SustainaFlow AI', 'Transformación de CFDI 4.0 a métricas ESG. Analiza facturas electrónicas y genera informes de impacto ambiental, cumplimiento normativo y huella de carbono para empresas mexicanas.', 'Python, FastAPI, SQLite, Pandas, LangChain, Ollama', 'https://github.com/LuisRaulBt7274/sustainaflow-ai'),
-    (2, 'Neural Net Visualizer', 'Herramienta interactiva para visualizar redes neuronales en tiempo real con animaciones 3D.', 'React, Three.js, TensorFlow.js', 'https://github.com/LuisRaulBt7274/neural-viz'),
-    (3, 'Task Automator', 'Automatización de flujos de trabajo usando LLMs locales con Ollama.', 'Python, Ollama, SQLite, FastAPI', 'https://github.com/LuisRaulBt7274/task-automator'),
-    (4, 'Dotfiles Manager', 'Gestor de configuraciones Linux para Pop!_OS/COSMIC.', 'Bash, Git, Stow', 'https://github.com/LuisRaulBt7274/dotfiles')
+    (2, 'Task Automator', 'Automatización de flujos de trabajo usando LLMs locales con Ollama.', 'Python, Ollama, SQLite, FastAPI', 'https://github.com/LuisRaulBt7274/task-automator'),
+    (3, 'Dotfiles Manager', 'Gestor de configuraciones Linux para Pop!_OS/COSMIC.', 'Bash, Git, Stow', 'https://github.com/LuisRaulBt7274/dotfiles')
   `);
 }
+
+// Remove legacy project entries that should no longer be displayed.
+db.run("DELETE FROM projects WHERE title = 'Neural Net Visualizer'");
 
 // Save to file
 const data = db.export();
