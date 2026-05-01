@@ -4,6 +4,7 @@ projects/portfolio/frontend/dist/
 backend/node_modules/
 projects/portfolio/backend/node_modules/
 .opencode/node_modules/
+.gitattributes
 .git/
 *.db
 dist/
