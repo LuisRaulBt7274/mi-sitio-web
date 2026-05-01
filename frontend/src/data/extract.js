@@ -118,7 +118,7 @@ async function extractData() {
         year: '2023',
         role: 'Desarrollador',
         company: 'Proyectos Personales',
-        description: 'Dotfiles Manager, Neural Net Visualizer, Task Automator. Proyectos de código abierto.',
+        description: 'Dotfiles Manager, Task Automator. Proyectos de código abierto.',
         stack: ['Bash', 'React', 'Three.js', 'Git']
       }
     ],
