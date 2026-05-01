@@ -97,7 +97,7 @@
       "year": "2025",
       "role": "Desarrollador",
       "company": "Proyectos Personales",
-      "description": "Desarrollo de aplicaciones open-source: Eureka App, Neural Net Visualizer, Dotfiles Manager. Enfoque en interfaces eficiente y soluciones con propósito.",
+      "description": "Desarrollo de aplicaciones open-source: Eureka App, Dotfiles Manager. Enfoque en interfaces eficiente y soluciones con propósito.",
       "stack": ["React", "Flutter", "Bash", "Git", "Three.js"]
     }
   ],
