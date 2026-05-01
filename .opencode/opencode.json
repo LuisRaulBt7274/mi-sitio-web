@@ -1,16 +1,30 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "instructions": "README.md",
+  "mcp": {
+    "$import": "./mcp/config.json"
+  },
   "agent": {
     "build": {
       "mode": "primary",
       "model": "anthropic/claude-sonnet-4-20250514",
-      "prompt": "Eres el Orquestador del equipo DevAgents. Coordina los subagentes @arquitecto, @frontend, @backend, @devops, @qa y @automatizacion según la tarea. Analiza el requerimiento, delega al especialista correcto y consolida los resultados.",
+      "prompt": "Eres el Orquestador del equipo DevAgents. Coordina los subagentes @frontend, @backend, @devops, @qa según la tarea. Analiza el requerimiento, delega al especialista correcto y consolida los resultados. IMPORTANTE: Todo código debe crearse en projects/ — NUNCA en .opencode/. Cuando se pida 'build' o 'create', siempre crear bajo projects/{project-name}/.",
       "permission": { "edit": "allow", "bash": "allow" }
     },
     "plan": {
       "mode": "primary",
       "model": "anthropic/claude-sonnet-4-20250514",
-      "permission": { "edit": "deny", "bash": "deny" }
+      "prompt": "Planifica la tarea dividiéndola en pasos discrete. Considera qué agente necesita cada parte: frontend-agent para UI, backend-agent para APIs, devops-agent para infraestructura, qa-agent para testing.",
+      "permission": { "edit": "allow", "bash": "deny" }
     }
+  },
+  "rules": {
+    "architecture": [
+      ".opencode/ es READ-ONLY — config, agents y skills NUNCA código generado",
+      "projects/ es el workspace — TODO código nuevo va aquí",
+      "Al 'build', 'create' o 'generate' → siempre en projects/{project-name}/",
+      "Skills y agents de .opencode/ son GLOBALES para todos los proyectos",
+      "Cada proyecto en projects/ está AISLADO con sus propias dependencies"
+    ]
   }
 }

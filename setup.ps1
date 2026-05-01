@@ -5,11 +5,11 @@ $ErrorActionPreference = "Stop"
 
 Write-Host "[*] Configurando Portafolio de Luis Raul..." -ForegroundColor Cyan
 
-$ProjectRoot = "C:\Users\luis3\nexus-project"
+$ProjectRoot = Join-Path $PSScriptRoot "projects\portfolio"
 
 # Install Backend dependencies
 Write-Host "[+] Instalando dependencias del Backend..." -ForegroundColor Yellow
-Set-Location "$ProjectRoot\backend"
+Set-Location (Join-Path $ProjectRoot "backend")
 npm install
 
 if ($LASTEXITCODE -ne 0) {
@@ -19,7 +19,7 @@ if ($LASTEXITCODE -ne 0) {
 
 # Install Frontend dependencies
 Write-Host "[+] Instalando dependencias del Frontend..." -ForegroundColor Yellow
-Set-Location "$ProjectRoot\frontend"
+Set-Location (Join-Path $ProjectRoot "frontend")
 npm install
 
 if ($LASTEXITCODE -ne 0) {
@@ -27,7 +27,7 @@ if ($LASTEXITCODE -ne 0) {
     exit 1
 }
 
-Set-Location $ProjectRoot
+Set-Location $PSScriptRoot
 
 Write-Host "[OK] Setup completado!" -ForegroundColor Green
 Write-Host ""

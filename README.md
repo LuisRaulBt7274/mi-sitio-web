@@ -1,34 +1,34 @@
-# Portafolio de Luis Raúl
+# Nexus Project
 
-Portfolio profesional desarrollado con React y SQLite.
+Separación real del workspace:
 
-## Stack
+- `.opencode/` es el cerebro: configuración, agentes, MCPs y skills.
+- `projects/portfolio/` es el proyecto: frontend, backend y datos del portafolio.
 
-- **Frontend**: React 18 + Vite + Tailwind CSS
-- **Backend**: Express.js + sql.js (SQLite en navegador)
-- **Estilo**: Tema claro/oscuro con CSS variables
-- **Deploy**: GitHub Pages
+## Estructura
+
+```text
+nexus-project/
+├── .opencode/
+├── projects/
+│   └── portfolio/
+│       ├── backend/
+│       └── frontend/
+├── setup.ps1
+└── start.ps1
+```
+
+## Regla operativa
+
+Todo código nuevo del portafolio vive en `projects/portfolio/`.
+La carpeta `.opencode/` no debe recibir código de aplicación.
 
 ## Desarrollo
 
 ```powershell
-.\setup.ps1    # Instalar dependencias
-.\start.ps1     # Iniciar servidores
+.\setup.ps1
+.\start.ps1
 ```
 
-- Frontend: http://localhost:5173
-- Backend API: http://localhost:3001
-
-## Deploy
-
-```powershell
-cd frontend
-npm run deploy
-```
-
-## Datos
-
-- **Nombre**: Luis Raúl
-- **GitHub**: github.com/LuisRaulBt7274
-- **Educación**: ESCOM-IPN
-- **Proyecto Estrella**: SustainaFlow AI (CFDI 4.0 → métricas ESG)
+Frontend: http://localhost:5173
+Backend API: http://localhost:3001

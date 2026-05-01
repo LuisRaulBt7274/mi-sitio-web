@@ -1,0 +1,60 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "filesystem": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-filesystem", "C:/Users/luis3/nexus-project/projects"],
+      "enabled": true,
+      "description": "Local file access - read, write, list files in projects/"
+    },
+    "github": {
+      "type": "local", 
+      "command": ["npx", "-y", "@modelcontextprotocol/server-github"],
+      "enabled": true,
+      "description": "GitHub repo management, issues, PRs",
+      "environment": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "{env:GITHUB_TOKEN}"
+      }
+    },
+    "gdrive": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-gdrive"],
+      "enabled": false,
+      "description": "Google Drive file access",
+      "environment": {
+        "GOOGLE_CLIENT_ID": "{env:GOOGLE_CLIENT_ID}",
+        "GOOGLE_CLIENT_SECRET": "{env:GOOGLE_CLIENT_SECRET}"
+      }
+    },
+    "gmail": {
+      "type": "local",
+      "command": ["npx", "-y", "mcp-gmail"],
+      "enabled": false,
+      "description": "Gmail read and send emails",
+      "environment": {
+        "GOOGLE_CLIENT_ID": "{env:GOOGLE_CLIENT_ID}",
+        "GOOGLE_CLIENT_SECRET": "{env:GOOGLE_CLIENT_SECRET}"
+      }
+    },
+    "google-calendar": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-google-calendar"],
+      "enabled": false,
+      "description": "Google Calendar events management",
+      "environment": {
+        "GOOGLE_CLIENT_ID": "{env:GOOGLE_CLIENT_ID}",
+        "GOOGLE_CLIENT_SECRET": "{env:GOOGLE_CLIENT_SECRET}"
+      }
+    },
+    "slack": {
+      "type": "local",
+      "command": ["npx", "-y", "@zencoderai/slack-mcp-server"],
+      "enabled": false,
+      "description": "Slack channel reading and messaging",
+      "environment": {
+        "SLACK_BOT_TOKEN": "{env:SLACK_BOT_TOKEN}",
+        "SLACK_TEAM_ID": "{env:SLACK_TEAM_ID}"
+      }
+    }
+  }
+}

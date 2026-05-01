@@ -3,7 +3,7 @@
 
 $ErrorActionPreference = "Stop"
 
-$ProjectRoot = "C:\Users\luis3\nexus-project"
+$ProjectRoot = Join-Path $PSScriptRoot "projects\portfolio"
 
 Write-Host "[*] Iniciando servidores..." -ForegroundColor Cyan
 Write-Host ""

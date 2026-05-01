@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 async function extractData() {
-  const DB_PATH = path.join(__dirname, '../../backend/portfolio.db');
+  const DB_PATH = path.join(__dirname, '../../../backend/portfolio.db');
   const OUTPUT_PATH = path.join(__dirname, 'content.json');
 
   // Initialize SQL.js
@@ -159,7 +159,7 @@ async function extractData() {
   console.log(`✅ Data extracted to ${OUTPUT_PATH}`);
 
   // Also save a static version for the build
-  const staticPath = path.join(__dirname, '../../dist/content.json');
+  const staticPath = path.join(__dirname, '../../../dist/content.json');
   fs.writeFileSync(staticPath, JSON.stringify(content, null, 2));
   console.log(`✅ Static copy saved to ${staticPath}`);
 }
