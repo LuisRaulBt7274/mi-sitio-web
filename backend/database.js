@@ -66,23 +66,45 @@ if (result[0]?.values[0][0] === 0) {
 
 // Non-destructive integrity check: warn if project catalog drifts from expected set.
 const expectedProjectTitles = ['SustainaFlow AI', 'Task Automator', 'Dotfiles Manager'];
-const expectedTitleSet = new Set(expectedProjectTitles);
-const projectsResult = db.exec('SELECT title FROM projects');
-if (projectsResult[0]?.values) {
-  const existingTitles = projectsResult[0].values.map(row => String(row[0] ?? '').trim()).filter(Boolean);
+export function getProjectCatalogHealth() {
+  const expectedTitleSet = new Set(expectedProjectTitles);
+  const projectsResult = db.exec('SELECT title FROM projects ORDER BY id');
+
+  if (!projectsResult[0]?.values) {
+    return {
+      healthy: false,
+      expectedTitles: expectedProjectTitles,
+      existingTitles: [],
+      missingTitles: expectedProjectTitles,
+      unexpectedTitles: [],
+    };
+  }
+
+  const existingTitles = projectsResult[0].values
+    .map(row => String(row[0] ?? '').trim())
+    .filter(Boolean);
   const existingTitleSet = new Set(existingTitles);
 
-  const unexpectedTitles = existingTitles.filter(title => !expectedTitleSet.has(title));
+  const unexpectedTitles = [...new Set(existingTitles.filter(title => !expectedTitleSet.has(title)))];
   const missingTitles = expectedProjectTitles.filter(title => !existingTitleSet.has(title));
 
-  if (unexpectedTitles.length > 0 || missingTitles.length > 0) {
-    console.warn('[database] Project catalog drift detected.');
-    if (unexpectedTitles.length > 0) {
-      console.warn(`[database] Unexpected projects: ${unexpectedTitles.join(', ')}`);
-    }
-    if (missingTitles.length > 0) {
-      console.warn(`[database] Missing expected projects: ${missingTitles.join(', ')}`);
-    }
+  return {
+    healthy: unexpectedTitles.length === 0 && missingTitles.length === 0,
+    expectedTitles: expectedProjectTitles,
+    existingTitles,
+    missingTitles,
+    unexpectedTitles,
+  };
+}
+
+const projectCatalogHealth = getProjectCatalogHealth();
+if (!projectCatalogHealth.healthy) {
+  console.warn('[database] Project catalog drift detected.');
+  if (projectCatalogHealth.unexpectedTitles.length > 0) {
+    console.warn(`[database] Unexpected projects: ${projectCatalogHealth.unexpectedTitles.join(', ')}`);
+  }
+  if (projectCatalogHealth.missingTitles.length > 0) {
+    console.warn(`[database] Missing expected projects: ${projectCatalogHealth.missingTitles.join(', ')}`);
   }
 }
 

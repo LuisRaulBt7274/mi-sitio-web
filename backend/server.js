@@ -1,12 +1,38 @@
 import express from 'express';
 import cors from 'cors';
-import db, { queryAll, queryOne, runQuery } from './database.js';
+import db, { getProjectCatalogHealth, queryAll, queryOne, runQuery } from './database.js';
 
 const app = express();
 const PORT = 3001;
+const startedAt = new Date().toISOString();
 
 app.use(cors());
 app.use(express.json());
+
+// ============ HEALTH API ============
+app.get('/api/health', (req, res) => {
+  try {
+    const projectCatalog = getProjectCatalogHealth();
+    const status = projectCatalog.healthy ? 'ok' : 'warn';
+
+    res.json({
+      status,
+      service: 'portfolio-backend',
+      started_at: startedAt,
+      uptime_seconds: Math.floor(process.uptime()),
+      checks: {
+        database: 'ok',
+        project_catalog: projectCatalog,
+      },
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: 'error',
+      service: 'portfolio-backend',
+      error: error.message,
+    });
+  }
+});
 
 // ============ PROJECTS API ============
 app.get('/api/projects', (req, res) => {
