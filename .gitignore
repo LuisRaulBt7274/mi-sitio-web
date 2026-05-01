@@ -8,3 +8,12 @@ projects/portfolio/backend/node_modules/
 *.db
 dist/
 projects/portfolio/backend/portfolio.db
+.opencode/
+.mcp/
+scripts/
+.env.example
+AGENTS.md
+README.md
+setup.ps1
+start.ps1
+projects/.gitkeep
