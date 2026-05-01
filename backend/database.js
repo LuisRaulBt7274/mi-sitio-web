@@ -64,9 +64,6 @@ if (result[0]?.values[0][0] === 0) {
   `);
 }
 
-// Keep only the current portfolio projects if legacy rows exist.
-db.run("DELETE FROM projects WHERE title NOT IN ('SustainaFlow AI', 'Task Automator', 'Dotfiles Manager')");
-
 // Save to file
 const data = db.export();
 const buffer = Buffer.from(data);
