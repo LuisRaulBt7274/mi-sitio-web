@@ -64,8 +64,8 @@ if (result[0]?.values[0][0] === 0) {
   `);
 }
 
-// Remove legacy project entries that should no longer be displayed.
-db.run("DELETE FROM projects WHERE title = 'Neural Net Visualizer'");
+// Keep only the current portfolio projects if legacy rows exist.
+db.run("DELETE FROM projects WHERE title NOT IN ('SustainaFlow AI', 'Task Automator', 'Dotfiles Manager')");
 
 // Save to file
 const data = db.export();
