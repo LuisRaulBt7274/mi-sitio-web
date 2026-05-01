@@ -1,0 +1,167 @@
+{
+  "profile": {
+    "name": "Luis Raul Morales Gómez",
+    "education": "ESCOM · IPN — Ingeniería en Sistemas Computacionales",
+    "title": "Disponible para proyectos",
+    "github": "https://github.com/LuisRaulBt7274",
+    "linkedin": "https://www.linkedin.com/in/luis-morales-30609a365/",
+    "email": "luis.39140@gmail.com",
+    "interests": [
+      "Linux (Pop!_OS/COSMIC)",
+      "Automatización con LLMs locales",
+      "Desarrollo Backend",
+      "Inteligencia Artificial"
+    ],
+    "about": "Estudiante de Ingeniería en Sistemas Computacionales en ESCOM · IPN. Apasionado por C++, Python y el desarrollo de software open-source. Soy una persona responsable, adaptable y proactiva, con un fuerte interés en la ingeniería de software y la administración de sistemas. Mi objetivo es especializarme en desarrollo back-end o análisis de datos, aportando valor real mientras sigo formándome. Cuento con formación técnica en soporte, sistemas operativos Linux/Windows, y experiencia práctica en proyectos de software y diseño computacional. Me muevo con igual comodidad en el nivel de sistemas que en el desarrollo de aplicaciones.",
+    "meta": [
+      "ESCOM · IPN — Ing. Sistemas Computacionales",
+      "Inglés B1 CEFR (en curso)",
+      "Español nativo"
+    ],
+    "heroTitle": ["Interfaces", "eficientes.", "Soluciones", "con propósito."]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "SustainaFlow AI",
+      "description": "Diseño e implementación del frontend para una plataforma de gestión sostenible asistida por inteligencia artificial. Transformación de CFDI 4.0 a métricas ESG. Analiza facturas electrónicas y genera informes de impacto ambiental, cumplimiento normativo y huella de carbono para empresas mexicanas.",
+      "tech_stack": "React, Tailwind CSS, Python, FastAPI, LangChain, Ollama",
+      "github_url": "https://github.com/LuisRaulBt7274/sustainaflow-ai"
+    },
+    {
+      "id": 2,
+      "title": "Eureka App",
+      "description": "Aplicación orientada a la gestión del conocimiento y la productividad personal, con enfoque en flujos de aprendizaje estructurado. Interfaces limpias y funcionales con React y Flutter. Énfasis en rendimiento y experiencia de usuario.",
+      "tech_stack": "JavaScript, Flutter, Git",
+      "github_url": "https://github.com/LuisRaulBt7274/Eureka-app"
+    },
+    {
+      "id": 3,
+      "title": "IA Local con Ollama",
+      "description": "Configuración y despliegue de modelos de lenguaje a nivel local para procesamiento de datos privado, sin dependencia de servicios externos. Despliegue de modelos de lenguaje en entornos privados y pipelines de procesamiento de datos.",
+      "tech_stack": "Python, Ollama",
+      "github_url": null
+    },
+    {
+      "id": 4,
+      "title": "Neural Net Visualizer",
+      "description": "Herramienta interactiva para visualizar redes neuronales en tiempo real con animaciones 3D.",
+      "tech_stack": "React, Three.js, TensorFlow.js",
+      "github_url": "https://github.com/LuisRaulBt7274/neural-viz"
+    },
+    {
+      "id": 5,
+      "title": "Dotfiles Manager",
+      "description": "Gestor de configuraciones Linux para Pop!_OS/COSMIC. Administración de entornos Linux, scripting en Bash y gestión eficiente de dependencias y procesos.",
+      "tech_stack": "Bash, Git, Stow",
+      "github_url": "https://github.com/LuisRaulBt7274/dotfiles"
+    }
+  ],
+  "skills": {
+    "frontend": [
+      { "name": "React", "level": 90, "icon": "⚛️" },
+      { "name": "Flutter", "level": 75, "icon": "🅕" },
+      { "name": "Tailwind CSS", "level": 95, "icon": "🎨" },
+      { "name": "Three.js", "level": 60, "icon": "🌐" },
+      { "name": "HTML/CSS", "level": 85, "icon": "📄" },
+      { "name": "JavaScript", "level": 90, "icon": "📜" }
+    ],
+    "backend": [
+      { "name": "Python", "level": 85, "icon": "🐍" },
+      { "name": "C++", "level": 70, "icon": "➕" },
+      { "name": "Node.js", "level": 80, "icon": "🟢" },
+      { "name": "FastAPI", "level": 75, "icon": "⚡" },
+      { "name": "SQL", "level": 85, "icon": "🗄️" }
+    ],
+    "devops": [
+      { "name": "Linux", "level": 85, "icon": "🐧" },
+      { "name": "Bash", "level": 80, "icon": "💻" },
+      { "name": "Git", "level": 90, "icon": "📂" },
+      { "name": "Docker", "level": 65, "icon": "🐳" },
+      { "name": "REST APIs", "level": 80, "icon": "🔗" }
+    ],
+    "ai": [
+      { "name": "Ollama", "level": 85, "icon": "🧠" },
+      { "name": "LangChain", "level": 75, "icon": "🔗" },
+      { "name": "TensorFlow", "level": 55, "icon": "📊" }
+    ]
+  },
+  "experience": [
+    {
+      "year": "2026",
+      "role": "Desarrollador Full Stack",
+      "company": "SustainaFlow AI",
+      "description": "Diseño e implementación del frontend para una plataforma de gestión sostenible asistida por IA. Transformación de CFDI 4.0 a métricas ESG. Sistema de análisis de facturas electrónicas para reportes ambientales.",
+      "stack": ["React", "Tailwind CSS", "Python", "FastAPI", "LangChain", "Ollama"]
+    },
+    {
+      "year": "2025-2026",
+      "role": "Estudiante de Ingeniería",
+      "company": "ESCOM-IPN",
+      "description": "Ingeniería en Sistemas Computacionales. Cursos en desarrollo web, bases de datos y AI/ML. Formación técnica en soporte, sistemas operativos Linux/Windows, y experiencia práctica en proyectos de software y diseño computacional.",
+      "stack": ["C++", "Python", "Java", "SQL", "Linux"]
+    },
+    {
+      "year": "2025",
+      "role": "Desarrollador",
+      "company": "Proyectos Personales",
+      "description": "Desarrollo de aplicaciones open-source: Eureka App, Neural Net Visualizer, Dotfiles Manager. Enfoque en interfaces eficiente y soluciones con propósito.",
+      "stack": ["React", "Flutter", "Bash", "Git", "Three.js"]
+    }
+  ],
+  "services": [
+    {
+      "number": "01",
+      "title": "Desarrollo Frontend",
+      "description": "Interfaces limpias y funcionales con React y Flutter. Énfasis en rendimiento y experiencia de usuario."
+    },
+    {
+      "number": "02",
+      "title": "Desarrollo Backend",
+      "description": "APIs estructuradas, manejo de bases de datos y lógica de negocio sólida con Python y Node.js."
+    },
+    {
+      "number": "03",
+      "title": "Sistemas & DevOps Básico",
+      "description": "Administración de entornos Linux, scripting en Bash y gestión eficiente de dependencias y procesos."
+    },
+    {
+      "number": "04",
+      "title": "IA Local & Automatización",
+      "description": "Despliegue de modelos de lenguaje en entornos privados y pipelines de procesamiento de datos."
+    }
+  ],
+  "blog": [
+    {
+      "title": "Configurando Pop!_OS con COSMIC",
+      "date": "2026-01-15",
+      "tags": ["linux", "cosmic", "dotfiles"],
+      "readTime": "5 min",
+      "excerpt": "Guía para configurar el nuevo escritorio COSMIC de Pop!_OS con herramientas de desarrollo."
+    },
+    {
+      "title": "LLMs Locales con Ollama",
+      "date": "2025-12-20",
+      "tags": ["ollama", "llm", "ai"],
+      "readTime": "8 min",
+      "excerpt": "Cómo configurar Ollama en tu máquina local para tener modelos de lenguaje privados."
+    },
+    {
+      "title": "CFDI 4.0 a Métricas ESG",
+      "date": "2026-02-05",
+      "tags": ["esg", "cfdi", "python"],
+      "readTime": "12 min",
+      "excerpt": "Automatización del análisis de facturas electrónicas para reportes de sostenibilidad."
+    },
+    {
+      "title": "Automatización con LangChain",
+      "date": "2025-11-12",
+      "tags": ["langchain", "automation", "python"],
+      "readTime": "10 min",
+      "excerpt": "Creando flujos de trabajo automatizados usando agentes de IA."
+    }
+  ],
+  "settings": {
+    "dark_mode": "false"
+  }
+}
