@@ -44,25 +44,17 @@
     },
     {
       "id": 4,
-      "title": "Neural Net Visualizer",
-      "description": "Herramienta interactiva para visualizar redes neuronales en tiempo real con animaciones 3D.",
-      "tech_stack": "React, Three.js, TensorFlow.js",
-      "github_url": "https://github.com/LuisRaulBt7274/neural-viz"
-    },
-    {
-      "id": 5,
       "title": "Dotfiles Manager",
-      "description": "Gestor de configuraciones Linux para Pop!_OS/COSMIC. Administración de entornos Linux, scripting en Bash y gestión eficiente de dependencias y procesos.",
+      "description": "Gestor de configuraciones Linux para Pop!_OS/ COSMIC. Administración de entornos Linux, scripting en Bash y gestión eficiente de dependencias y procesos.",
       "tech_stack": "Bash, Git, Stow",
       "github_url": "https://github.com/LuisRaulBt7274/dotfiles"
     }
   ],
   "skills": {
-    "frontend": [
+"frontend": [
       { "name": "React", "level": 90, "icon": "⚛️" },
       { "name": "Flutter", "level": 75, "icon": "🅕" },
       { "name": "Tailwind CSS", "level": 95, "icon": "🎨" },
-      { "name": "Three.js", "level": 60, "icon": "🌐" },
       { "name": "HTML/CSS", "level": 85, "icon": "📄" },
       { "name": "JavaScript", "level": 90, "icon": "📜" }
     ],
