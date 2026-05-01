@@ -34,6 +34,14 @@ Desde la raíz del repositorio:
 .\start.ps1
 ```
 
+## Git y publicación
+
+- La carpeta `.opencode/` queda local y no forma parte del proyecto.
+- Todo el trabajo del portafolio vive en `projects/portfolio/`.
+- `main` conserva el código fuente del portafolio.
+- `gh-pages` publica el build para GitHub Pages desde la raíz del branch.
+- Si GitHub Pages muestra un 404, revisa que la fuente del sitio esté configurada en `gh-pages` y no en `main`.
+
 ## Nota
 
 La configuración de OpenCode sigue viviendo en `.opencode/`.
